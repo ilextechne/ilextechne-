@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IlexTéchne – Tecnología para Salvar la Yerba</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+      color: #2d3c2e;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #388e3c, #1b5e20);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 105px;
+  animation: fadeInRotate 1.2s ease-out;
+  border-radius: 60%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      animation: fadeInDown 1s ease-out;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInRotate {
+      from { transform: rotate(-15deg) scale(0.8); opacity: 0; }
+      to { transform: rotate(0) scale(1); opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-40px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    .fade {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .slide {
+      animation: slideIn 1s ease forwards;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: #1b5e20;
+      border-left: 6px solid #81c784;
+      padding-left: 0.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      animation: slideIn 0.6s ease;
+    }
+
+    footer {
+      background-color: #c8e6c9;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1rem;
+      color: #1b5e20;
+      font-weight: bold;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 14px;
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
+      margin: 1rem auto;
+      display: block;
+      animation: fadeInUp 1s ease;
+    }
+
+    .foda-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .foda-item {
+      background-color: #ffffff;
+      border-left: 6px solid #66bb6a;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      animation: slideIn 0.8s ease;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img.jpg" alt="logo">
+    <h1>IlexTéchne</h1>
+    <p>¡Tecnología argentina para prevenir incendios y salvar la yerba mate!</p>
+  </header>
+
+  <main>
+    <section class="fade">
+      <h2>¿Qué es IlexTéchne?</h2>
+      <p><strong>IlexTéchne</strong> es un sistema autónomo de prevención y monitoreo en tiempo real de secaderos de yerba mate. Fue creado por estudiantes de 6°1° Electrónica de la E.E.S.T. N.º 1 de Merlo, para ofrecer una solución concreta ante incendios y pérdidas millonarias.</p>
+    </section>
+
+    <section class="fade">
+      <h2>¿Por qué lo hicimos?</h2>
+      <p>La industria yerbatera sufrió numerosos incendios devastadores. Nosotros decidimos actuar: creamos una herramienta real, accesible y con impacto positivo en las comunidades productoras. Porque la yerba no solo se toma: también se cuida.</p>
+    </section>
+
+    <section class="fade">
+      <h2>¿Qué lleva nuestro sistema?</h2>
+      <ul>
+        <li>ESP32 – Controlador con Wi-Fi/Bluetooth</li>
+        <li>DHT22 – Sensor de temperatura y humedad</li>
+        <li>MQ-135 – Detector de gases tóxicos</li>
+        <li>BMP280 – Sensor barométrico</li>
+        <li>Termopar MAX6675 – Alta temperatura</li>
+        <li>SIM800L – Envío de alertas por GSM</li>
+        <li>Buzzer y caja IP65 – Alarma y protección</li>
+      </ul>
+      <p><strong>Prototipo total:</strong> alrededor de $55.300 (modelo base).</p>
+    </section>
+
+    <section class="fade">
+      <h2>Análisis FODA</h2>
+      <div class="foda-grid">
+        <div class="foda-item"><strong>Fortalezas:</strong><br>Simple, modular, económico.</div>
+        <div class="foda-item"><strong>Oportunidades:</strong><br>Aplicable a otras industrias rurales.</div>
+        <div class="foda-item"><strong>Debilidades:</strong><br>Requiere cobertura celular o LoRa.</div>
+        <div class="foda-item"><strong>Amenazas:</strong><br>Resistencia al cambio tecnológico.</div>
+      </div>
+    </section>
+
+    <section class="fade">
+      <h2>Impacto y Objetivos</h2>
+      <ul>
+        <li>Salvar instalaciones productivas y empleos.</li>
+        <li>Mejorar la seguridad industrial en zonas rurales.</li>
+        <li>Motivar el uso de electrónica con propósito social.</li>
+        <li>Fomentar una Argentina más conectada, sustentable y preparada.</li>
+      </ul>
+    </section>
+
+    <section class="gallery fade">
+      <h2>avances del proyecto</h2>
+      <ul>
+ <strong></strong>proximamente...</strong>
+    </section>
+      </ul>
+    <section class="fade">
+  <h2>Equipo de Trabajo</h2>
+  <ul>
+    <li><strong>Ian Hidalgo</strong></li>
+    <li><strong>Agustín Mamani</strong></li>
+    <li><strong>Franco Jimenez</strong></li>
+    <li><strong>Luca Perez</strong></li>
+    <li><strong>Lisandro Perez</strong></li>
+  </ul>
+  <p>6°1° Electrónica – E.E.S.T. N.º 1 de Merlo</p>
+  <p>Profesor guía: <strong>Marcos Biato</strong></p>
+</section>
+
+    <section class="fade">
+      <h2>Contacto</h2>
+      <p>Correo: <a href="mailto:ilextechne@gmail.com">ilextechne@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/ilextechne" target="_blank">@ilextechne</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 IlexTéchne | E.E.S.T. N.º 1 de Merlo | Proyecto argentino con impacto real.
+  </footer>
+</body>
+</html>
